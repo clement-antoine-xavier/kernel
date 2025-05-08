@@ -20,22 +20,8 @@
  SOFTWARE.
  */
 
-#include <cstdlib>
-#include <iostream>
-#include <memory>
-#include <stdexcept>
-
 #include "kernel.hpp"
 
-int main(int argc, char *const argv[], char *const envp[]) {
-  std::unique_ptr<kernel::Kernel> kernel = nullptr;
-
-  try {
-    kernel = std::make_unique<kernel::Kernel>();
-  } catch (const std::exception &execption) {
-    std::cerr << "Error: " << execption.what() << std::endl;
-    return EXIT_FAILURE;
-  }
-
-  return EXIT_SUCCESS;
+extern "C" void _start() {
+  kernel::Kernel kernel;
 }
