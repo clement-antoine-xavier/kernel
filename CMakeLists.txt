@@ -1,6 +1,10 @@
 cmake_minimum_required(VERSION 3.20)
 
-project(kernel)
+project(kernel 
+    VERSION 1.0.0
+    DESCRIPTION "An experimental project to build a basic operating system kernel using C++."
+    LANGUAGES CXX
+)
 
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
