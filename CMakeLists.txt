@@ -48,6 +48,3 @@ set_target_properties(${PROJECT_NAME} PROPERTIES
     CXX_EXTENSIONS NO
     LINKER_LANGUAGE CXX
 )
-
-# Linker script option for the target
-target_link_options(${PROJECT_NAME} PRIVATE "-Wl,-T${LINKER_SCRIPT}")
